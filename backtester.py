@@ -1,49 +1,48 @@
 import subprocess
 
-folders = ["clock", "recursive", "neat", "static"]  # set configs/live/List of config folders
-
-# List of all bybit symbols and config.json name will be same
 symbols = [
-    "1000LUNCUSDT", "1000PEPEUSDT", "SHIB1000USDT", "AAVEUSDT",
-    "ACHUSDT", "ADAUSDT", "AGIXUSDT", "AGLDUSDT", "AKROUSDT",
-    "ALGOUSDT", "ALPHAUSDT", "ANKRUSDT", "APTUSDT",
-    "ARBUSDT", "ARPAUSDT", "ATOMUSDT", "AVAXUSDT",
-    "BCHUSDT", "BELUSDT", "BNBUSDT",
-    "CELOUSDT", "CFXUSDT", "CHZUSDT", "COMPUSDT", "CRVUSDT",
-    "DOGEUSDT", "DOTUSDT", "DYDXUSDT", "ENSUSDT",
-    "ETCUSDT", "FETUSDT", "FILUSDT", "FTMUSDT", "GALAUSDT",
-    "GMTUSDT", "GRTUSDT", "ICPUSDT",
-    "INJUSDT", "JASMYUSDT", "KAVAUSDT", "KEYUSDT",
-    "LDOUSDT", "LINAUSDT", "LINKUSDT", "LTCUSDT",
-    "LUNA2USDT", "MANAUSDT", "MASKUSDT", "MATICUSDT",
-    "MKRUSDT", "MTLUSDT", "NEARUSDT", "OCEANUSDT",
-    "OPUSDT", "REEFUSDT", "RLCUSDT", "RNDRUSDT",
-    "SANDUSDT", "SNXUSDT", "SOLUSDT", "STGUSDT", "SUIUSDT",
-    "SUSHIUSDT", "SXPUSDT", "TOMOUSDT", "TRXUSDT", "UNIUSDT",
-    "WAVESUSDT", "XLMUSDT", "XRPUSDT", "XVGUSDT",
-    "ZECUSDT", "ZILUSDT", "ZRXUSDT", # ... add more symbols here
+    "ADAUSDT", "XRPUSDT", "MATICUSDT", "XLMUSDT", # high qty pct precision 1.0 list
+    "NEARUSDT" "APTUSDT", "ARBUSDT", "LDOUSDT", "OPUSDT", "DYDXUSDT", # low qty pct precision 0.1 list
+    "HBARUSDT", "SHIB1000USDT", "DOGEUSDT", "GALAUSDT", "GRTUSDT", "CHZUSDT", "ALGOUSDT", "1000LUNCUSDT", "1000PEPEUSDT", # top 100 small coin
 ]
 
-start_date = "2021-01-01"
-end_date = "2023-08-15"
+folders = ["clock1", "recursive", "neat", "static"]  # set configs/live/List of config folders
+
+start_dates = ["2021-01-01"]
+end_date = "2023-08-19"
 user = "bybit_01"
-#long = "enable"
-#short = "disable"
-leverage = "0.25"
-balance = "1000.0"
 
-for folder in folders:
+long_leverage_values = ["0.20"] # ["0.1", "0.15", "0.20", "1.0"]
+
+short_leverage_values = ["0.15"]
+
+balance_values = ["250"]  # ["250", "500", "1000"]
+
+def run_backtest_for_balance(command, symbol, start_date, short_leverage, long_leverage):
+    for folder in folders:
+        for balance in balance_values:
+            full_command = command + [
+                "-u", user,
+                "-s", symbol,
+                "-sw", short_leverage,
+                "-lw", long_leverage,
+                "-m", "future",
+                "-sb", balance,
+                f"configs/live/{folder}/{symbol}.json",
+                "--start_date", start_date,
+                "--end_date", end_date
+            ]
+            subprocess.run(full_command)
+
+# Command for the backtest
+base_command = [
+    "python3",
+    "backtest.py",
+]
+
+# Run the backtest for each starting date, symbol, short_leverage, and long_leverage value
+for start_date in start_dates:
     for symbol in symbols:
-        command = [
-            "python3",
-            "backtest.py",
-            "-u", user,
-            "-s", symbol,
-            "-lw", leverage,
-            "-sb", balance,
-            f"configs/live/{folder}/{symbol}.json",
-            "--start_date", start_date,
-            "--end_date", end_date
-        ]
-
-        subprocess.run(command)
+        for short_leverage_value in short_leverage_values:
+            for long_leverage_value in long_leverage_values:
+                run_backtest_for_balance(base_command, symbol, start_date, short_leverage_value, long_leverage_value)
