@@ -16,7 +16,7 @@ def run_optimize(symbol, backtest_config, optimize_config, start_date, end_date)
 
 def main():
     symbols = ["ADAUSDT", "XRPUSDT", "MATICUSDT", "XLMUSDT", # qty precision 1.0 list
-    "NEARUSDT" "APTUSDT", "ARBUSDT", "LDOUSDT", "OPUSDT", "DYDXUSDT", # low qty pct precision 0.1 list
+    "NEARUSDT", "APTUSDT", "ARBUSDT", "LDOUSDT", "OPUSDT", "DYDXUSDT", # low qty pct precision 0.1 list
     "HBARUSDT", "SHIB1000USDT", "DOGEUSDT", "GALAUSDT", "GRTUSDT", "CHZUSDT", "ALGOUSDT", "1000LUNCUSDT", "1000PEPEUSDT", # top 100 small coin
 ]
 
