@@ -8,7 +8,7 @@ def run_optimize(symbol, backtest_config, optimize_config, start_date, end_date)
         "optimize.py",
         "-s", symbol,
         "-b", backtest_config,
-        "-o", optimize_config,
+        "-oc", optimize_config,
         "--start_date", start_date,
         "--end_date", end_date
     ]
@@ -22,8 +22,8 @@ def main():
 
     backtest_config = "configs/backtest/default.hjson"
     optimize_config = "configs/optimize/default.hjson"
-    start_date = "2021-01-01"
-    end_date = "2023-08-19"
+    start_date = "2022-01-01"
+    end_date = "2024-02-01"
 
     for symbol in symbols:
         run_optimize(symbol, backtest_config, optimize_config, start_date, end_date)
