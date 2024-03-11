@@ -1,0 +1,396 @@
+{
+  user: bybit_01
+  base_dir: backtests
+  multisym_auto_unstuck_enabled: true
+  pnls_max_lookback_days: 90
+  loss_allowance_pct: 0.26673211673874087
+  stuck_threshold: 0.051292826361510564
+  unstuck_close_pct: 0.26673211673874087
+  TWE_long: 3
+  TWE_short: 0.3
+  execution_delay_seconds: 2
+  auto_gs: true
+  starting_balance: 200
+  long_enabled: true
+  short_enabled: false
+  start_date: 2022-01-01
+  end_date: 2024-03-09
+  symbols:
+  {
+    AGIXUSDT: -lm n -sm gs
+    DOGEUSDT: -lm n -sm gs
+    FETUSDT: -lm n -sm gs
+    GRTUSDT: -lm n -sm gs
+    LDOUSDT: -lm n -sm gs
+    OPUSDT: -lm n -sm gs
+    RNDRUSDT: -lm n -sm gs
+    SHIB1000USDT: -lm n -sm gs
+  }
+  live_configs_dir: configs/live/
+  default_config_path: configs/live/test7.json
+  exchange: bybit
+  live_configs:
+  {
+    AGIXUSDT:
+    {
+      config_name: recursive_grid_safe_symbols_1153days
+      logging_level: 0
+      long:
+      {
+        auto_unstuck_delay_minutes: 0.0
+        auto_unstuck_ema_dist: 0.0
+        auto_unstuck_qty_pct: 0.0
+        auto_unstuck_wallet_exposure_threshold: 0.0
+        backwards_tp: true
+        ddown_factor: 0.6685751584278983
+        ema_span_0: 712.9501394192814
+        ema_span_1: 219.66422740539218
+        enabled: true
+        initial_eprice_ema_dist: -0.009905802660004251
+        initial_qty_pct: 0.020000000000053888
+        markup_range: 0.017132477448577214
+        min_markup: 0.00280354934347723
+        n_close_orders: 4
+        rentry_pprice_dist: 0.023665985470373574
+        rentry_pprice_dist_wallet_exposure_weighting: 9.014211929677968
+        wallet_exposure_limit: 0.375
+      }
+      short:
+      {
+        auto_unstuck_delay_minutes: 83.03575854371327
+        auto_unstuck_ema_dist: 0.02070992686754985
+        auto_unstuck_qty_pct: 0.04547782969331997
+        auto_unstuck_wallet_exposure_threshold: 0.03292423821468231
+        backwards_tp: true
+        ddown_factor: 0.8504092654731205
+        ema_span_0: 175.89135001748886
+        ema_span_1: 367.16020805877565
+        enabled: false
+        initial_eprice_ema_dist: -0.004661188094902233
+        initial_qty_pct: 0.009351757488115738
+        markup_range: 0.006814747938748663
+        min_markup: 0.006321383129151609
+        n_close_orders: 5
+        rentry_pprice_dist: 0.00564804294225538
+        rentry_pprice_dist_wallet_exposure_weighting: 0.5157087533186726
+        wallet_exposure_limit: 0.01
+      }
+    }
+    DOGEUSDT:
+    {
+      config_name: recursive_grid_safe_symbols_1153days
+      logging_level: 0
+      long:
+      {
+        auto_unstuck_delay_minutes: 0.0
+        auto_unstuck_ema_dist: 0.0
+        auto_unstuck_qty_pct: 0.0
+        auto_unstuck_wallet_exposure_threshold: 0.0
+        backwards_tp: true
+        ddown_factor: 0.6685751584278983
+        ema_span_0: 712.9501394192814
+        ema_span_1: 219.66422740539218
+        enabled: true
+        initial_eprice_ema_dist: -0.009905802660004251
+        initial_qty_pct: 0.020000000000053888
+        markup_range: 0.017132477448577214
+        min_markup: 0.00280354934347723
+        n_close_orders: 4
+        rentry_pprice_dist: 0.023665985470373574
+        rentry_pprice_dist_wallet_exposure_weighting: 9.014211929677968
+        wallet_exposure_limit: 0.375
+      }
+      short:
+      {
+        auto_unstuck_delay_minutes: 83.03575854371327
+        auto_unstuck_ema_dist: 0.02070992686754985
+        auto_unstuck_qty_pct: 0.04547782969331997
+        auto_unstuck_wallet_exposure_threshold: 0.03292423821468231
+        backwards_tp: true
+        ddown_factor: 0.8504092654731205
+        ema_span_0: 175.89135001748886
+        ema_span_1: 367.16020805877565
+        enabled: false
+        initial_eprice_ema_dist: -0.004661188094902233
+        initial_qty_pct: 0.009351757488115738
+        markup_range: 0.006814747938748663
+        min_markup: 0.006321383129151609
+        n_close_orders: 5
+        rentry_pprice_dist: 0.00564804294225538
+        rentry_pprice_dist_wallet_exposure_weighting: 0.5157087533186726
+        wallet_exposure_limit: 0.01
+      }
+    }
+    FETUSDT:
+    {
+      config_name: recursive_grid_safe_symbols_1153days
+      logging_level: 0
+      long:
+      {
+        auto_unstuck_delay_minutes: 0.0
+        auto_unstuck_ema_dist: 0.0
+        auto_unstuck_qty_pct: 0.0
+        auto_unstuck_wallet_exposure_threshold: 0.0
+        backwards_tp: true
+        ddown_factor: 0.6685751584278983
+        ema_span_0: 712.9501394192814
+        ema_span_1: 219.66422740539218
+        enabled: true
+        initial_eprice_ema_dist: -0.009905802660004251
+        initial_qty_pct: 0.020000000000053888
+        markup_range: 0.017132477448577214
+        min_markup: 0.00280354934347723
+        n_close_orders: 4
+        rentry_pprice_dist: 0.023665985470373574
+        rentry_pprice_dist_wallet_exposure_weighting: 9.014211929677968
+        wallet_exposure_limit: 0.375
+      }
+      short:
+      {
+        auto_unstuck_delay_minutes: 83.03575854371327
+        auto_unstuck_ema_dist: 0.02070992686754985
+        auto_unstuck_qty_pct: 0.04547782969331997
+        auto_unstuck_wallet_exposure_threshold: 0.03292423821468231
+        backwards_tp: true
+        ddown_factor: 0.8504092654731205
+        ema_span_0: 175.89135001748886
+        ema_span_1: 367.16020805877565
+        enabled: false
+        initial_eprice_ema_dist: -0.004661188094902233
+        initial_qty_pct: 0.009351757488115738
+        markup_range: 0.006814747938748663
+        min_markup: 0.006321383129151609
+        n_close_orders: 5
+        rentry_pprice_dist: 0.00564804294225538
+        rentry_pprice_dist_wallet_exposure_weighting: 0.5157087533186726
+        wallet_exposure_limit: 0.01
+      }
+    }
+    GRTUSDT:
+    {
+      config_name: recursive_grid_safe_symbols_1153days
+      logging_level: 0
+      long:
+      {
+        auto_unstuck_delay_minutes: 0.0
+        auto_unstuck_ema_dist: 0.0
+        auto_unstuck_qty_pct: 0.0
+        auto_unstuck_wallet_exposure_threshold: 0.0
+        backwards_tp: true
+        ddown_factor: 0.6685751584278983
+        ema_span_0: 712.9501394192814
+        ema_span_1: 219.66422740539218
+        enabled: true
+        initial_eprice_ema_dist: -0.009905802660004251
+        initial_qty_pct: 0.020000000000053888
+        markup_range: 0.017132477448577214
+        min_markup: 0.00280354934347723
+        n_close_orders: 4
+        rentry_pprice_dist: 0.023665985470373574
+        rentry_pprice_dist_wallet_exposure_weighting: 9.014211929677968
+        wallet_exposure_limit: 0.375
+      }
+      short:
+      {
+        auto_unstuck_delay_minutes: 83.03575854371327
+        auto_unstuck_ema_dist: 0.02070992686754985
+        auto_unstuck_qty_pct: 0.04547782969331997
+        auto_unstuck_wallet_exposure_threshold: 0.03292423821468231
+        backwards_tp: true
+        ddown_factor: 0.8504092654731205
+        ema_span_0: 175.89135001748886
+        ema_span_1: 367.16020805877565
+        enabled: false
+        initial_eprice_ema_dist: -0.004661188094902233
+        initial_qty_pct: 0.009351757488115738
+        markup_range: 0.006814747938748663
+        min_markup: 0.006321383129151609
+        n_close_orders: 5
+        rentry_pprice_dist: 0.00564804294225538
+        rentry_pprice_dist_wallet_exposure_weighting: 0.5157087533186726
+        wallet_exposure_limit: 0.01
+      }
+    }
+    LDOUSDT:
+    {
+      config_name: recursive_grid_safe_symbols_1153days
+      logging_level: 0
+      long:
+      {
+        auto_unstuck_delay_minutes: 0.0
+        auto_unstuck_ema_dist: 0.0
+        auto_unstuck_qty_pct: 0.0
+        auto_unstuck_wallet_exposure_threshold: 0.0
+        backwards_tp: true
+        ddown_factor: 0.6685751584278983
+        ema_span_0: 712.9501394192814
+        ema_span_1: 219.66422740539218
+        enabled: true
+        initial_eprice_ema_dist: -0.009905802660004251
+        initial_qty_pct: 0.020000000000053888
+        markup_range: 0.017132477448577214
+        min_markup: 0.00280354934347723
+        n_close_orders: 4
+        rentry_pprice_dist: 0.023665985470373574
+        rentry_pprice_dist_wallet_exposure_weighting: 9.014211929677968
+        wallet_exposure_limit: 0.375
+      }
+      short:
+      {
+        auto_unstuck_delay_minutes: 83.03575854371327
+        auto_unstuck_ema_dist: 0.02070992686754985
+        auto_unstuck_qty_pct: 0.04547782969331997
+        auto_unstuck_wallet_exposure_threshold: 0.03292423821468231
+        backwards_tp: true
+        ddown_factor: 0.8504092654731205
+        ema_span_0: 175.89135001748886
+        ema_span_1: 367.16020805877565
+        enabled: false
+        initial_eprice_ema_dist: -0.004661188094902233
+        initial_qty_pct: 0.009351757488115738
+        markup_range: 0.006814747938748663
+        min_markup: 0.006321383129151609
+        n_close_orders: 5
+        rentry_pprice_dist: 0.00564804294225538
+        rentry_pprice_dist_wallet_exposure_weighting: 0.5157087533186726
+        wallet_exposure_limit: 0.01
+      }
+    }
+    OPUSDT:
+    {
+      config_name: recursive_grid_safe_symbols_1153days
+      logging_level: 0
+      long:
+      {
+        auto_unstuck_delay_minutes: 0.0
+        auto_unstuck_ema_dist: 0.0
+        auto_unstuck_qty_pct: 0.0
+        auto_unstuck_wallet_exposure_threshold: 0.0
+        backwards_tp: true
+        ddown_factor: 0.6685751584278983
+        ema_span_0: 712.9501394192814
+        ema_span_1: 219.66422740539218
+        enabled: true
+        initial_eprice_ema_dist: -0.009905802660004251
+        initial_qty_pct: 0.020000000000053888
+        markup_range: 0.017132477448577214
+        min_markup: 0.00280354934347723
+        n_close_orders: 4
+        rentry_pprice_dist: 0.023665985470373574
+        rentry_pprice_dist_wallet_exposure_weighting: 9.014211929677968
+        wallet_exposure_limit: 0.375
+      }
+      short:
+      {
+        auto_unstuck_delay_minutes: 83.03575854371327
+        auto_unstuck_ema_dist: 0.02070992686754985
+        auto_unstuck_qty_pct: 0.04547782969331997
+        auto_unstuck_wallet_exposure_threshold: 0.03292423821468231
+        backwards_tp: true
+        ddown_factor: 0.8504092654731205
+        ema_span_0: 175.89135001748886
+        ema_span_1: 367.16020805877565
+        enabled: false
+        initial_eprice_ema_dist: -0.004661188094902233
+        initial_qty_pct: 0.009351757488115738
+        markup_range: 0.006814747938748663
+        min_markup: 0.006321383129151609
+        n_close_orders: 5
+        rentry_pprice_dist: 0.00564804294225538
+        rentry_pprice_dist_wallet_exposure_weighting: 0.5157087533186726
+        wallet_exposure_limit: 0.01
+      }
+    }
+    RNDRUSDT:
+    {
+      config_name: recursive_grid_safe_symbols_1153days
+      logging_level: 0
+      long:
+      {
+        auto_unstuck_delay_minutes: 0.0
+        auto_unstuck_ema_dist: 0.0
+        auto_unstuck_qty_pct: 0.0
+        auto_unstuck_wallet_exposure_threshold: 0.0
+        backwards_tp: true
+        ddown_factor: 0.6685751584278983
+        ema_span_0: 712.9501394192814
+        ema_span_1: 219.66422740539218
+        enabled: true
+        initial_eprice_ema_dist: -0.009905802660004251
+        initial_qty_pct: 0.020000000000053888
+        markup_range: 0.017132477448577214
+        min_markup: 0.00280354934347723
+        n_close_orders: 4
+        rentry_pprice_dist: 0.023665985470373574
+        rentry_pprice_dist_wallet_exposure_weighting: 9.014211929677968
+        wallet_exposure_limit: 0.375
+      }
+      short:
+      {
+        auto_unstuck_delay_minutes: 83.03575854371327
+        auto_unstuck_ema_dist: 0.02070992686754985
+        auto_unstuck_qty_pct: 0.04547782969331997
+        auto_unstuck_wallet_exposure_threshold: 0.03292423821468231
+        backwards_tp: true
+        ddown_factor: 0.8504092654731205
+        ema_span_0: 175.89135001748886
+        ema_span_1: 367.16020805877565
+        enabled: false
+        initial_eprice_ema_dist: -0.004661188094902233
+        initial_qty_pct: 0.009351757488115738
+        markup_range: 0.006814747938748663
+        min_markup: 0.006321383129151609
+        n_close_orders: 5
+        rentry_pprice_dist: 0.00564804294225538
+        rentry_pprice_dist_wallet_exposure_weighting: 0.5157087533186726
+        wallet_exposure_limit: 0.01
+      }
+    }
+    SHIB1000USDT:
+    {
+      config_name: recursive_grid_safe_symbols_1153days
+      logging_level: 0
+      long:
+      {
+        auto_unstuck_delay_minutes: 0.0
+        auto_unstuck_ema_dist: 0.0
+        auto_unstuck_qty_pct: 0.0
+        auto_unstuck_wallet_exposure_threshold: 0.0
+        backwards_tp: true
+        ddown_factor: 0.6685751584278983
+        ema_span_0: 712.9501394192814
+        ema_span_1: 219.66422740539218
+        enabled: true
+        initial_eprice_ema_dist: -0.009905802660004251
+        initial_qty_pct: 0.020000000000053888
+        markup_range: 0.017132477448577214
+        min_markup: 0.00280354934347723
+        n_close_orders: 4
+        rentry_pprice_dist: 0.023665985470373574
+        rentry_pprice_dist_wallet_exposure_weighting: 9.014211929677968
+        wallet_exposure_limit: 0.375
+      }
+      short:
+      {
+        auto_unstuck_delay_minutes: 83.03575854371327
+        auto_unstuck_ema_dist: 0.02070992686754985
+        auto_unstuck_qty_pct: 0.04547782969331997
+        auto_unstuck_wallet_exposure_threshold: 0.03292423821468231
+        backwards_tp: true
+        ddown_factor: 0.8504092654731205
+        ema_span_0: 175.89135001748886
+        ema_span_1: 367.16020805877565
+        enabled: false
+        initial_eprice_ema_dist: -0.004661188094902233
+        initial_qty_pct: 0.009351757488115738
+        markup_range: 0.006814747938748663
+        min_markup: 0.006321383129151609
+        n_close_orders: 5
+        rentry_pprice_dist: 0.00564804294225538
+        rentry_pprice_dist_wallet_exposure_weighting: 0.5157087533186726
+        wallet_exposure_limit: 0.01
+      }
+    }
+  }
+  cache_fpath: backtests/multisymbol/bybit/AGIX_DOGE_FET_GRT_LDO_OP_RNDR_SHIB1000_2022-01-01_2024-03-09_hlc_cache.npy
+}
