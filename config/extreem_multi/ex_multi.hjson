@@ -1,0 +1,39 @@
+{
+    user: bybit_01
+    base_dir: backtests
+    multisym_auto_unstuck_enabled: true
+    pnls_max_lookback_days: 90
+    loss_allowance_pct: 0.29822188114387976
+    stuck_threshold: 0.051292826361510564
+    unstuck_close_pct: 0.26673211673874087
+    TWE_long: 3.0
+    TWE_short: 0.3
+    execution_delay_seconds: 2
+    auto_gs: true
+
+    starting_balance: 250.0
+    
+    long_enabled: true
+    short_enabled: false
+
+    # format YYYY-MM-DD
+    start_date: 2022-01-01
+    end_date: now
+     
+    symbols: {
+        AGIXUSDT: -lm n -sm gs
+        FETUSDT: -lm n -sm gs 
+        GRTUSDT: -lm n -sm gs
+        LDOUSDT: -lm n -sm gs 
+        OPUSDT: -lm n -sm gs
+        RNDRUSDT: -lm n -sm gs
+    }
+
+    // Specify directory containing live configs.
+    // They are sorted alphabetically, then the first config whose filename includes symbol is selected.
+    // Set to "" to disable
+    live_configs_dir: "configs/live/extreem_multi/"
+
+    // if symbol is missing from live_configs_map, default to this config
+    default_config_path: configs/live/config.json
+  }
